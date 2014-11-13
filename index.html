@@ -30,7 +30,7 @@
 </div>
 </div>
 
-<div class="text">Its Me ! Srinivasan Sivanandan</div>
+<div id="text" class="text">Its Me ! Srinivasan Sivanandan</div>
 <div class="small-text">Coming Soon ...</div>
 
 </div>
@@ -51,6 +51,7 @@ $('body').mousemove(function(event){
 		var degy = (y/768)*60;
 		//$('#mantle').css('-webkit-transform','translate3d(0px,0px,80px) rotate('+(x*0.05)+'deg)');
 		$('#pic').css('-webkit-transform','rotateX('+degy+'deg) rotateY('+degx+'deg)');
+		$('#text').css('-webkit-transform','translate('+x/100+'px,'+y/100+'px)');
 		$('#pic').css('-moz-transform','rotateX('+degy+'deg) rotateY('+degx+'deg)');
 	});
 
