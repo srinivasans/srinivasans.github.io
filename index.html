@@ -1,156 +1,128 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="en" lang="en" itemscope itemtype="http://schema.org/Personal">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="en" lang="en" itemscope itemtype="http://schema.org/AboutPage">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Srinivasan Sivanandan's Personal Webpage">
+    <meta name="description" content="Srinivasan | Student, Computational Biologist and Web Developer">
     <meta name="author" content="Srinivasan S">
 	<meta name="keywords" content="Srinivasan Sivanandan, Srinivasan, Sivanandan, Web Developer, IIT Kharagpur, Indian Institute of Technology, Srinivasan S, 11BT30023, Kshitij 2014, Personal Website, Srinivasan Sivanandan Personal Website, Personal Blog, Blog" />
 	<meta itemprop="name" content="Personal Website | Srinivasan Sivanandan" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<title>Its Me ! Srinivasan Sivanandan</title>
+	<title>Srinivasan | Student, Computational Biologist and Web Developer</title>
 	
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
-	<link href='http://fonts.googleapis.com/css?family=Stalemate' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	
+	
+	<!-- Bootstrap Plugin -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/onepage-scroll.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<!-- Bootstrap JS -->
+	<!-- Latest compiled and minified JavaScript -->
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="scripts/onepage-scroll.js"></script>
+	<script type="text/javascript" src="scripts/typed.js"></script>
+
 </head>
+
 <body itemscope itemtype="http://schema.org/WebPage">
-<div class="container">
-<canvas id="parallax" width="18000" height="10000"></canvas>
+	<div class="container-fluid wrapper" id="wrapper">
+		
+		<nav class="navbar">
+			  <div class="container">
+			  	<div class="col-md-2"></div>
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="col-md-8 menu">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			    </div>
 
-<div id="wrap" class="wrapper">
-<div id="pic" class="pic-wrapper">
-<div class="pic">
-	<img class="pic" src="img/pic.jpg">
-</div>
-</div>
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a href="#">WHO AM I</a></li>
+			        <li><a href="#experience">EXPERIENCE</a></li>
+			        <li><a href="#">PROJECTS</a></li>
+			        <li><a href="#">SKILLS</a></li>
+			        <li><a href="#">EDUCATION</a></li>
+			        <li><a href="#">BLOG</a></li>
+			        <li><a href="#">CONTACT</a></li>
+			        <li><a href="#">TECH AND FUN</a></li>
+			      </ul>
+			  	</div>
+			  	</div>
+			  </div>
+		</nav>
 
-<div id="text" class="text">Its Me ! Srinivasan Sivanandan</div>
-<div class="small-text">Coming Soon ...</div>
 
-</div>
 
-</div>
+		<div class="container-fluid cover section" id="landing">
+			<div class="overlay"></div>
+			<div class="content">
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4 profile_picture">
+						<div class="image" id="face">
+							<img src="img/face.jpg" class="face">
+						</div>
+						<div class="name">Srinivasan Sivanandan</div>
+						<div class="whoami" id="whoami"></div>
+					</div>
+					<div class="col-md-4"></div>
+				</div>
+			</div>
+		</div>
+
+
+	<!--	<div class="container-fluid experience section" id="experience">
+		EXPERIENCE
+		</div>-->
+
+
+	</div>
 </body>
-</html>
 
-<script type="text/javascript">	
+<script type="text/javascript">
 $('body').mousemove(function(event){
 		var x = event.clientX;
 		var y = event.clientY;
 		//x = (x > 683)? (x-683):(683-x);
 		//y = (y > 384)? (y-384):(384-y);
-		x = x-683;
-		y = 384-y;
-		var degx = (x/1366)*100;
-		var degy = (y/768)*60;
+		var degx = (x/1366)*10;
+		var degy = (y/768)*10;
+		console.log(degx);
+		console.log(degy);
 		//$('#mantle').css('-webkit-transform','translate3d(0px,0px,80px) rotate('+(x*0.05)+'deg)');
-		$('#pic').css('-webkit-transform','rotateX('+degy+'deg) rotateY('+degx+'deg)');
-		$('#text').css('-webkit-transform','translate('+x/100+'px,'+y/100+'px)');
-		$('#pic').css('-moz-transform','rotateX('+degy+'deg) rotateY('+degx+'deg)');
+		$('#landing').css('background-position',degx+'% '+degy+'%' );
 	});
 
+setInterval(type_whoami,2000);
 
-	//Parallax Initialization
-	var canvas = document.getElementById('parallax');
-      var context = canvas.getContext('2d');
-	  var WIDTH=canvas.width;
-	  var HEIGHT=canvas.height;
-	  var rint=Math.random();
-	  var count=0;
- 
-	function Circle(id) {
-	this.id=id;
-	this.settings = {time_to_live:8000, x_maxspeed:0.25, y_maxspeed:0.5, radius_max:10, rt:1, x_origin:960, y_origin:540, random:true, blink:true};
-
-    this.reset = function() {
-        this.x = Math.random()*canvas.width+1;
-        this.y = Math.random()*canvas.height+1;
-        this.r = 5+Math.random()*5+1;
-		this.lineWidth=10+Math.random()*10+1;
-        this.dx = (Math.random()*this.settings.x_maxspeed) * (Math.random() < .5 ? -1 : 1);
-        this.dy = (Math.random()*this.settings.y_maxspeed) * (Math.random() < .5 ? -1 : 1);
-        this.hl = (this.settings.time_to_live/rint)*(this.r/this.settings.radius_max);
-        this.rt = Math.random()*this.hl;
-        this.settings.rt = Math.random()+1;
-        this.stop = Math.random()*.2+.4;
-        this.settings.xdrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
-        this.settings.ydrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
-    }
-
-    this.fade = function() {
-        this.rt += this.settings.rt;
-    }
-
-    this.draw = function() {
-      context.beginPath();
-      context.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
-      context.fillStyle = 'rgba(255,255,255,0.5)';
-      context.fill();
-      context.lineWidth = this.lineWidth;
-      context.strokeStyle = 'rgba(255,255,255,0.1)';
-      context.stroke();    
-	  for(var i=this.id;i<count;i++)
-	  {
-	  if(Math.abs(pxs[i].x-this.x)<100 && Math.abs(pxs[i].y-this.y)<100)
-	  {
-	  context.beginPath();
-	  context.lineWidth = 1;
-      context.strokeStyle = 'rgba(255,255,255,0.1)';
-      context.moveTo(pxs[i].x,pxs[i].y);
-      context.lineTo(this.x,this.y);
-      context.stroke();
-	  }
-	  }
-	  
-    }
-
-    this.move = function() {
-        this.x += (this.rt/this.hl)*this.dx;
-        this.y += (this.rt/this.hl)*this.dy;
-        if(this.x > WIDTH || this.x < 0) this.dx *= -1;
-        if(this.y > HEIGHT || this.y < 0) this.dy *= -1;
-    }
+function type_whoami(){
+      $(".whoami").typed({
+        strings: ["Undergraduate Student at Indian Institute of Technology Kharagpur", "Summer Intern at Ontario Institute for Cancer Research","Computational Biologist by Profession","Web developer by Passion"],
+        typeSpeed: 10,
+        backDelay: 2000,
+        loop:true,
+      });
 }
-
-	  var pxs={};
-	  
-	  window.start_parallax = function()
-	  {
-	  for(var i=0;i<50;i++)
-	  {
-      pxs[i] = new Circle(i);
-	  count++;
-      pxs[i].reset();
-	  pxs[i].draw();
-	  }
-	  var rint=60+Math.random()*50;
-	  setInterval(draw,rint);
-	  }
-	  
-	  function draw() {
-	  	
-    context.clearRect(0,0,WIDTH,HEIGHT);
-    for(var i = 0; i < count; i++) {
-        pxs[i].fade();
-        pxs[i].move();
-        pxs[i].draw();
-    }
-}
-
-$('document').ready(function(){
-$('#parallax').attr('height',$(window).height());
-$('.container').css('min-height',$(window).height());
-$('#parallax').attr('width',$(window).width());
-start_parallax();
-
-});
-
-//End of Parallax Initialization
-	
 </script>
+
+</html>
+
+
