@@ -43,7 +43,7 @@
 <body itemscope itemtype="http://schema.org/WebPage">
 	<div class="container-fluid wrapper" id="wrapper">
 
-		<div class="container-fluid cover section" id="landing">
+		<section class="container-fluid cover section" id="landing">
 			<nav class="navbar">
 			  <div class="container">
 			  	<div class="col-md-2"></div>
@@ -61,8 +61,8 @@
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav">
-			        <li class="active"><a href="#">WHO AM I</a></li>
-			        <li><a href="#experience">EXPERIENCE</a></li>
+			        <li onclick="whoami()" href="#" class="active"><a href="#">WHO AM I</a></li>
+			        <li><a onclick="experience()" href="#">EXPERIENCE</a></li>
 			        <li><a href="#">PROJECTS</a></li>
 			        <li><a href="#">SKILLS</a></li>
 			        <li><a href="#">EDUCATION</a></li>
@@ -101,30 +101,30 @@
 
 						<div class="name">Srinivasan Sivanandan</div>
 						<div class="whoami" id="whoami"></div>
-						<div class="resume"><a class="btn btn-default">Resume</a></div>
-						<div class="more"></div>
+						<div class="resume"><a class="btn btn-default"><code>&lt;resume&gt;</code></a></div>
+						<div class="more"><a onclick="more()"><div class="more-btn">more <br/><span class="glyphicon glyphicon-chevron-down"></span></div></a></div>
 					</div>
 					<div class="col-md-3"></div>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="">
-			<div class="term" id="term">
-			</div>
-		</div>div>
-
-
-
-	<!--	<div class="container-fluid experience section" id="experience">
+		<section class="container-fluid experience section" id="experience">
 		EXPERIENCE
-		</div>-->
+		</section>
 
 
 	</div>
+
+	<div class="">
+			<div class="term" id="term">
+			</div>
+	</div>
+
 </body>
 
 <script type="text/javascript">
+var $current=1;
 $('body').mousemove(function(event){
 		var x = event.clientX;
 		var y = event.clientY;
@@ -142,7 +142,7 @@ setInterval(type_whoami,2000);
 
 function type_whoami(){
       $(".whoami").typed({
-        strings: ["Undergraduate Student at Indian Institute of Technology Kharagpur", "Summer Intern at Ontario Institute for Cancer Research","Computational Biologist by Interest","Web developer by Passion"],
+        strings: ["Undergrad at Indian Institute of Technology Kharagpur", "Summer Intern at Ontario Institute for Cancer Research","Computational Biologist by Interest","Web developer by Passion","Tech Lead @ ReadersNode"],
         typeSpeed: 10,
         backDelay: 2000,
         loop:true,
@@ -154,13 +154,34 @@ $('document').ready(function(){
 });
 
 $('#term').terminal(function(command, term) {
-    if (command == 'test') {
-        term.echo("you just typed 'test'");
+	if(command == 'whoami'){
+		whoami();
+	}
+    else if (command == 'experience') {
+        experience();
     } else {
         term.echo('unknown command');
     }
 }, { greetings:'Welcome',prompt: '$ srinivasansivanandan.me > ', name: 'terminal',height:50});
 
+
+
+$("#wrapper").onepage_scroll(); 
+
+function whoami(){
+	$("#wrapper").moveTo(1);
+	$current=1;
+}
+
+function experience(){
+	$("#wrapper").moveTo(2);
+	$current=2;
+}
+
+function more(){
+	$current+=1;
+	$("#wrapper").moveTo($current);
+}
 
 </script>
 
