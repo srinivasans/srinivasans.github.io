@@ -23,6 +23,7 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/onepage-scroll.css"/>
+	<link rel="stylesheet" href="css/jquery.terminal.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -32,6 +33,10 @@
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="scripts/onepage-scroll.js"></script>
 	<script type="text/javascript" src="scripts/typed.js"></script>
+	<script type="text/javascript" src="scripts/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.terminal-0.8.8.min.js"></script>
+	
+
 
 </head>
 
@@ -75,18 +80,38 @@
 			<div class="overlay"></div>
 			<div class="content">
 				<div class="row">
-					<div class="col-md-4"></div>
-					<div class="col-md-4 profile_picture">
-						<div class="image" id="face">
-							<img src="img/face.jpg" class="face">
+					<div class="col-md-3"></div>
+					<div class="col-md-6 profile_picture">
+						
+						<div class="row">
+							<div class="dna-wrap col-md-3">
+							<div class="dna">
+								<img src="img/dna.png" class="dna">
+							</div>
+							</div>
+							<div class="face-wrap col-md-6">
+							<div class="image" id="face">
+								<img src="img/face.jpg" class="face">
+							</div>
+							</div>
+							<div class="code-wrap col-md-3">
+							<div class="code">
+								<img src="img/code.png" class="code">
+							</div>
+							</div>
 						</div>
+
 						<div class="name">Srinivasan Sivanandan</div>
 						<div class="whoami" id="whoami"></div>
 					</div>
-					<div class="col-md-4"></div>
+					<div class="col-md-3"></div>
 				</div>
 			</div>
 		</div>
+
+		<div class="term" id="term">
+		</div>
+
 
 
 	<!--	<div class="container-fluid experience section" id="experience">
@@ -115,12 +140,26 @@ setInterval(type_whoami,2000);
 
 function type_whoami(){
       $(".whoami").typed({
-        strings: ["Undergraduate Student at Indian Institute of Technology Kharagpur", "Summer Intern at Ontario Institute for Cancer Research","Computational Biologist by Profession","Web developer by Passion"],
+        strings: ["Undergraduate Student at Indian Institute of Technology Kharagpur", "Summer Intern at Ontario Institute for Cancer Research","Computational Biologist by Interest","Web developer by Passion"],
         typeSpeed: 10,
         backDelay: 2000,
         loop:true,
       });
 }
+
+$('document').ready(function(){
+	$('#term').click();
+});
+
+$('#term').terminal(function(command, term) {
+    if (command == 'test') {
+        term.echo("you just typed 'test'");
+    } else {
+        term.echo('unknown command');
+    }
+}, { greetings:'Welcome',prompt: '$ srinivasansivanandan.me > ', name: 'terminal',height:50});
+
+
 </script>
 
 </html>
