@@ -109,9 +109,10 @@ div.more>a{cursor:pointer;text-decoration:none;}
 
 
 /*MOBILE ONLY*/
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
 	div.dna,div.code{display:none;}
 	.navbar-collapse{text-align:center;}
 	.navbar-nav{text-align:center;}
+	.term{display:none;}
 	section.cover{background-size:auto 110%;}
 }
