@@ -113,7 +113,7 @@
 			<div class="row content">
 				<div class="col-md-1"></div>
 				<div class="col-md-10">
-					<h2>Experience</h2>
+					<h2><code>experience</code></h2>
 
 					<div class="project-content">
 						<div class="col-md-3">
@@ -165,12 +165,12 @@
 		</section>
 
 
-		<section class="container-fluid projects section project-cover" id="projects">
+		<section class="container-fluid projects section project-cover" id="skills">
 			<div class="overlay"></div>
 			<div class="row content">
 				<div class="col-md-2"></div>
 				<div class="col-md-8">
-					<h2>Skills</h2>
+					<h2><kbd>skills</kbd></h2>
 					<div class="experience-content"></div>
 				</div>
 				<div class="col-md-2"></div>
@@ -196,8 +196,6 @@ $('body').mousemove(function(event){
 		//y = (y > 384)? (y-384):(384-y);
 		var degx = (x/1366)*10;
 		var degy = (y/768)*10;
-		console.log(degx);
-		console.log(degy);
 		//$('#mantle').css('-webkit-transform','translate3d(0px,0px,80px) rotate('+(x*0.05)+'deg)');
 		$('#landing').css('background-position',degx+'% '+degy+'%' );
 	});
@@ -218,42 +216,65 @@ $('document').ready(function(){
 });
 
 $('#term').terminal(function(command, term) {
+	command=$.trim(command);
 	if(typeof window[command] == "function"){
 		window[command]();
+		console.log(command);
     } else {
         term.echo('unknown command');
+        console.log('Unknown Command');
     }
-}, { greetings:'Welcome',prompt: '$ srinivasansivanandan.me > ', name: 'terminal',height:50});
+}, 	{ 
+	greetings:'Welcome',
+	prompt: '$ srinivasansivanandan.me > ', 
+	name: 'terminal',
+	height:50, 
+	completion: function(terminal, command, callback) {
+        callback(['whoami', 'experience', 'skills']);
+    }
+
+	});
 
 
 
-$("#wrapper").onepage_scroll({ 
-	loop: false,
-   	keyboard: true,   }); 
+
+jQuery.fn.extend(
+{
+  scrollTo : function(speed, easing)
+  {
+  	console.log(this);
+    return this.each(function()
+    {
+      var targetOffset = $(this).offset().top;
+      $('html,body').animate({scrollTop: targetOffset}, speed, easing);
+    });
+  }
+});
+
 
 function whoami(){
-	$("#wrapper").moveTo(1);
+	$('#landing').scrollTo(500);
 	$current=1;
 }
 
 function experience(){
-	$("#wrapper").moveTo(2);
+	$("#experience").scrollTo(500);
 	$current=2;
 }
 
 function projects(){
-	$("#wrapper").moveTo(3);
+	$("#projects").scrollTo(500);
 	$current=2;
 }
 
 function skills(){
-	$("#wrapper").moveTo(3);
+	$("#skills").scrollTo(500);
 	$current=2;
+	console.log("HEY SKILLS");
 }
 
 function more(){
-	$current+=1;
-	$("#wrapper").moveTo($current);
+	experience();
 }
 
 </script>
