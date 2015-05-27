@@ -63,8 +63,8 @@
 			      <ul class="nav navbar-nav">
 			        <li onclick="whoami()" href="#" class="active"><a href="#">WHO AM I</a></li>
 			        <li><a onclick="experience()" href="#">EXPERIENCE</a></li>
-			        <li><a href="#">PROJECTS</a></li>
-			        <li><a href="#">SKILLS</a></li>
+			        <li><a onclick="projects()" href="#">PROJECTS</a></li>
+			        <li><a onclick="skills()" href="#">SKILLS</a></li>
 			        <li><a href="#">EDUCATION</a></li>
 			        <li><a href="#">BLOG</a></li>
 			        <li><a href="#">CONTACT</a></li>
@@ -110,7 +110,36 @@
 		</section>
 
 		<section class="container-fluid experience section" id="experience">
-		EXPERIENCE
+			<div class="row content">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<h2>Experience</h2>
+					<div class="experience-content"></div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</section>
+
+
+		<section class="container-fluid projects section project-cover" id="projects">
+			<div class="overlay"></div>div>
+			<div class="row content">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<h2>Projects and Internships</h2>
+
+					<div class="project-content">
+						<div class="col-md-3"><div class="proj"><img style="margin-left:-0.5vmin;margin-top:3vmin" src="img/oicr.png"></div></div>
+						<div class="col-md-3"><div class="proj"><img style="margin-top:7vmin;margin-left:0vmin" src="img/uofa.svg"></div></div>
+						<div class="col-md-3"><div class="proj"><img style="margin-left:-0vmin;margin-top:1.5vmin" src="img/iitm.png"></div></div>
+						<div class="col-md-3"><div class="proj"><img style="margin-left:-0vmin;margin-top:2vmin;width:72%" src="img/iitkgp.png"></div></div>
+						<div class="col-md-6"><div class="proj"><img style="margin-left:-2vmin;margin-top:5.5vmin;width:100%" src="img/readersnode.png"></div></div>
+						<div class="col-md-6"><div class="proj"><img style="margin-top: 3vmin;margin-left: 0vmin;width: 75%;" src="img/ktj.png"></div></div>
+						<div class="col-md-12"><div class="proj"><img style="background:#000000" src="img/geekzz.png"></div></div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
 		</section>
 
 
@@ -154,11 +183,8 @@ $('document').ready(function(){
 });
 
 $('#term').terminal(function(command, term) {
-	if(command == 'whoami'){
-		whoami();
-	}
-    else if (command == 'experience') {
-        experience();
+	if(typeof window[command] == "function"){
+		window[command]();
     } else {
         term.echo('unknown command');
     }
@@ -166,7 +192,9 @@ $('#term').terminal(function(command, term) {
 
 
 
-$("#wrapper").onepage_scroll(); 
+$("#wrapper").onepage_scroll({ 
+	loop: false,
+   	keyboard: true,   }); 
 
 function whoami(){
 	$("#wrapper").moveTo(1);
@@ -175,6 +203,16 @@ function whoami(){
 
 function experience(){
 	$("#wrapper").moveTo(2);
+	$current=2;
+}
+
+function projects(){
+	$("#wrapper").moveTo(3);
+	$current=2;
+}
+
+function skills(){
+	$("#wrapper").moveTo(3);
 	$current=2;
 }
 
