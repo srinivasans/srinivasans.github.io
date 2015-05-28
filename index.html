@@ -31,9 +31,9 @@
 	<!-- Bootstrap JS -->
 	<!-- Latest compiled and minified JavaScript -->
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="scripts/onepage-scroll.js"></script>
+	<!--<script type="text/javascript" src="scripts/onepage-scroll.js"></script>-->
 	<script type="text/javascript" src="scripts/typed.js"></script>
-	<script type="text/javascript" src="scripts/jquery.mousewheel.min.js"></script>
+	<!--<script type="text/javascript" src="scripts/jquery.mousewheel.min.js"></script>-->
 	<script type="text/javascript" src="scripts/jquery.terminal-0.8.8.min.js"></script>
 	
 
@@ -63,12 +63,12 @@
 			      <ul class="nav navbar-nav">
 			        <li onclick="whoami()" href="#" class="active"><a href="#">WHO AM I</a></li>
 			        <li><a onclick="experience()" href="#">EXPERIENCE</a></li>
-			        <li><a onclick="projects()" href="#">PROJECTS</a></li>
 			        <li><a onclick="skills()" href="#">SKILLS</a></li>
-			        <li><a href="#">EDUCATION</a></li>
-			        <li><a href="#">BLOG</a></li>
-			        <li><a href="#">CONTACT</a></li>
-			        <li><a href="#">TECH AND FUN</a></li>
+			        <li><a onclick="projects()" href="#">PROJECTS</a></li>
+			        <li><a onclick="education()" href="#">EDUCATION</a></li>
+			        <li><a onclick="stash()" href="#">BLOG</a></li>
+			        <li><a onclick="contact()" href="#">CONTACT</a></li>
+			        <li><a onclick="technfun()" href="#">TECH AND FUN</a></li>
 			      </ul>
 			  	</div>
 			  	</div>
@@ -77,9 +77,9 @@
 
 			<div class="overlay"></div>
 			<div class="content">
-				<div class="row">
-					<div class="col-md-3"></div>
-					<div class="col-md-6 profile_picture">
+				<div class="row main">
+					<div class="col-md-2"></div>
+					<div class="col-md-8 profile_picture">
 						
 						<div class="row">
 							<div class="dna-wrap col-md-3">
@@ -104,7 +104,7 @@
 						<div class="resume"><a class="btn btn-default"><code>&lt;resume&gt;</code></a></div>
 						<div class="more"><a onclick="more()"><div class="more-btn">more <br/><span class="glyphicon glyphicon-chevron-down"></span></div></a></div>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-2"></div>
 				</div>
 			</div>
 		</section>
@@ -124,7 +124,7 @@
 						
 						<div class="col-md-3">
 							<div class="proj"><img style="margin-top:7vmin;margin-left:0vmin" src="img/uofa.svg"></div>
-							<div class="proj-detail">Summer Student<br/>CPFFD</div>
+							<div class="proj-detail">Summer Student<br/>CPPFD</div>
 							<div class="proj-time">May 2014 - July 2014</div>
 						</div>
 
@@ -171,7 +171,10 @@
 				<div class="col-md-2"></div>
 				<div class="col-md-8">
 					<h2><kbd>skills</kbd></h2>
-					<div class="experience-content"></div>
+					<div class="experience-content">
+						
+
+					</div>
 				</div>
 				<div class="col-md-2"></div>
 			</div>
@@ -213,6 +216,12 @@ function type_whoami(){
 
 $('document').ready(function(){
 	$('#term').click();
+	$('body').click(function(){
+		$('#term').click();
+	});
+	$("body").keypress(function(){
+		$('#term').click();
+	});
 });
 
 $('#term').terminal(function(command, term) {
@@ -242,11 +251,12 @@ jQuery.fn.extend(
 {
   scrollTo : function(speed, easing)
   {
-  	console.log(this);
     return this.each(function()
     {
-      var targetOffset = $(this).offset().top;
-      $('html,body').animate({scrollTop: targetOffset}, speed, easing);
+      var targetOffset = $(this).position().top;
+      
+      console.log(targetOffset);
+      $('html,body').animate({scrollTop: targetOffset+'px'}, speed, easing);
     });
   }
 });
@@ -270,7 +280,6 @@ function projects(){
 function skills(){
 	$("#skills").scrollTo(500);
 	$current=2;
-	console.log("HEY SKILLS");
 }
 
 function more(){
