@@ -164,8 +164,7 @@
 			</div>
 		</section>
 
-
-		<section class="container-fluid projects section project-cover" id="skills">
+		<section class="container-fluid skills section skills-cover" id="skills">
 			<div class="overlay"></div>
 			<div class="row content">
 				<div class="col-md-2"></div>
@@ -179,6 +178,50 @@
 				<div class="col-md-2"></div>
 			</div>
 		</section>
+
+		<section class="container-fluid projects section project-cover" id="projects">
+			<div class="row content">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<h2><code>projects</code></h2>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</section>
+
+		<section class="container-fluid education section education-cover" id="education">
+			<div class="overlay"></div>
+			<div class="row content">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<h2><kbd>education</kbd></h2>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</section>
+
+		<section class="container-fluid stash section" id="stash">
+			<div class="row content">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<h2><code>stash</code></h2>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</section>
+
+		<section class="container-fluid contact section contact-cover" id="contact">
+			<div class="overlay"></div>
+			<div class="row content">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<h2><kbd>contact</kbd></h2>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</section>
+
+
 
 
 	</div>
@@ -239,7 +282,7 @@ $('#term').terminal(function(command, term) {
 	name: 'terminal',
 	height:50, 
 	completion: function(terminal, command, callback) {
-        callback(['whoami', 'experience', 'skills']);
+        callback(['whoami', 'experience', 'skills','projects','education','stash','contact']);
     }
 
 	});
@@ -279,6 +322,21 @@ function projects(){
 
 function skills(){
 	$("#skills").scrollTo(500);
+	$current=2;
+}
+
+function education(){
+	$("#education").scrollTo(500);
+	$current=2;
+}
+
+function stash(){
+	$("#stash").scrollTo(500);
+	$current=2;
+}
+
+function contact(){
+	$("#contact").scrollTo(500);
 	$current=2;
 }
 

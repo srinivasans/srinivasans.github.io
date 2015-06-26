@@ -74,11 +74,14 @@ div.more-btn{background:rgba(0,0,0,0.2);border-radius:100%;width:11vmin;height:1
 div.more>a{cursor:pointer;text-decoration:none;}
 h2{text-align:center;margin:0px auto;}
 section.cover{background:url('../img/bg1.jpg');height:100vh;background-size:110vmax auto;}
-section.project-cover{background:url('../img/bg2.jpg');height:100vh;background-size:100vmax auto;}
+section.skills-cover{background:url('../img/bg2.jpg');height:100vh;background-size:100vmax auto;}
+section.education-cover{background:url('../img/bg3.jpg');height:100vh;background-size:100vmax auto;}
+section.contact-cover{background:url('../img/bg4.jpg');height:100vh;background-size:100vmax auto;}
 div.proj{background:#FFFFFF;;padding:1vmin;width:20vmin;height:20vmin;}
 div.proj>img{width:15vmin;height:auto;margin-left:-0.5vmin;margin-top:6.5vmin;}
 div.project-content{padding-top:5vmin;height:auto;padding-bottom:10vmax;}
 div.proj-detail{font-size:15px;}
+
 
 ::-webkit-scrollbar {
     width: 5px;
