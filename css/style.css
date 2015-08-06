@@ -1,7 +1,7 @@
 
 html,body{padding:0px;margin:0px;font-family: 'PT Sans' !important, cursive;color:#FFFFFF;background:#FFFFFF;}
-html{overflow-x:hidden;overflow-y:auto;height:100%;}
-body{font-family: 'PT Sans' !important;overflow-y:auto;}
+html{overflow:initial ;height:100%;}
+body{font-family: 'PT Sans' !important;overflow-y:auto;overflow-x:hidden;}
 div.container{width:100%;margin:0px auto;font-family: 'PT Sans' !important;color:#FFFFFF;}
 canvas{text-align:center;margin:0px auto;position:fixed;}
 div.pic{max-width:100%;padding:5px;background:rgba(255,255,255,0.6);border-radius:100%;margin:0px auto;-webkit-transform:translate3d(0px,0px,200px);-moz-transform:translate3d(0px,0px,200px);-ms-transform:translate3d(0px,0px,200px);}

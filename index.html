@@ -138,6 +138,10 @@
 							<div class="proj-detail">Bachelors and Masters Thesis<br/>Computational Structural Biology Group</div>
 							<div class="proj-time">July 2014 - present</div>
 						</div>
+
+						<div class="">
+						</div>
+
 						<div class="col-md-3">
 							<div class="proj"><img style="margin-left:-2vmin;margin-top:5.5vmin;width:100%" src="img/readersnode.png"></div>
 							<div class="proj-detail">Lead Developer<br/>ReadersNode</div>
@@ -246,7 +250,7 @@ $('body').mousemove(function(event){
 		$('#landing').css('background-position',degx+'% '+degy+'%' );
 	});
 
-setInterval(type_whoami,2000);
+//setInterval(type_whoami,2000);
 
 function type_whoami(){
       $(".whoami").typed({
@@ -259,12 +263,10 @@ function type_whoami(){
 
 $('document').ready(function(){
 	$('#term').click();
-	$('body').click(function(){
-		$('#term').click();
-	});
 	$("body").keypress(function(){
 		$('#term').click();
 	});
+	type_whoami();
 });
 
 $('#term').terminal(function(command, term) {
