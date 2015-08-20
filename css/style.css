@@ -107,7 +107,7 @@ div.exp{padding-bottom:5px;}
 
 
 .skills-content{text-align:center;align:center;}
-.education-content{margin-top:50px;text-align:justify;}
+.education-content{margin-top:50px;text-align:justify;overflow-y:auto;}
 .education-title{font-size:20px;padding-bottom:5px;}
 .education-school{font-size:18px;padding-bottom:3px;}
 .education-degree{font-size:16px;}
@@ -143,4 +143,6 @@ div.exp{padding-bottom:5px;}
 	.navbar-nav{text-align:center;}
 	.term{display:none;}
 	section.cover{background-size:auto 110%;}
+	section.education-cover{background:url('../img/bg3.jpg');height:130vh;background-size:200vmax auto;}
+	div.education-overlay{height:130vh;}
 }
