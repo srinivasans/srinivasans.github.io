@@ -34,9 +34,10 @@ section.experience>div{color:#333;}
 div.name{font-size:30px;margin-top:20px;font-family: 'PT Sans';}
 div.resume{margin-top:20px;}
 .typed-cursor{position:absolute;}
+.cmd{z-index:10;}
 .cmd>span{margin-top:0px;}
 div.main{margin-top:4vmin;}
-.terminal{padding:3px;}
+.terminal{padding:3px;z-index:10;}
 
 /*Typed JS CSS*/
 .typed-cursor{
@@ -62,7 +63,7 @@ div.main{margin-top:4vmin;}
     100% { opacity:1; }
 }
 div.terminal>*{font-family: "FreeMono", monospace !important; color:#FFE792 !important;/**/}
-div.term{max-height:24px;bottom:0px;position:fixed;width:100%;}
+div.term{max-height:46px;bottom:0px;position:fixed;width:100%;}
 div.code,div.dna{text-align:center;display:inline-block;vertical-align:middle;background:rgba(255,255,255,0.2);border-radius:100%;width:20vmin;height:20vmin;margin-top:3vmin;margin-bottom:3vmin;}
 img.code,img.dna{width:10vmin;margin:5vmin auto;vertical-align:middle;}
 div.dna-wrap,div.code-wrap,div.face-wrap{vertical-align:middle;}
@@ -98,16 +99,18 @@ div.proj-detail{font-size:15px;}
 }
 div.project-content>div>div{text-align:center;margin:0px auto;}
 code.warning{color:;}
+div.exp{padding-bottom:5px;}
+.popover{border-radius:0px;max-width:500px;font-family: 'PT Sans' !important;border:1px solid #272822;z-index:3;}
+.popover.bottom > .arrow::after{border-color:#FFFFFF;border-bottom-color:#272822;}
+.popover-content{text-align:justify !important;}
 
 
 
-
-
-
-
-
-
-
+.skills-content{text-align:center;align:center;}
+.education-content{margin-top:50px;text-align:justify;}
+.education-title{font-size:23px;padding-bottom:5px;}
+.education-school{font-size:20px;padding-bottom:3px;}
+.education-degree{font-size:18px;}
 
 
 
