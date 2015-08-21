@@ -26,7 +26,7 @@ section.section{min-height:100vh;width:100vw;}
 a:hover{background:transparent;color:#FFFFFF;}
 div.image{border-radius:100%;overflow:hidden;width:27vmin;height:27vmin;border:5px solid rgba(0,0,0,0.2);display:inline-block;vertical-align:middle;}
 img.face{width:100%;height:auto;}
-img.ach-img{width:120px;}
+img.ach-img{height:35px;}
 div.profile_picture>div.image{text-align:center;margin:0px auto;}
 div.profile_picture{text-align:center;}
 div.content{padding-top:4.5vmax;}
@@ -111,7 +111,7 @@ div.exp{padding-bottom:5px;}
 
 .skills-content{text-align:center;align:center;}
 div.achievements-content{color:#272822;margin-top:50px;}
-div.achievement{font-size:20px;margin-bottom:30px;}
+div.achievement{font-size:18px;margin-bottom:30px;}
 .education-content{margin-top:50px;text-align:justify;overflow-y:auto;}
 .education-title{font-size:20px;padding-bottom:5px;}
 .education-school{font-size:18px;padding-bottom:3px;}
@@ -135,8 +135,14 @@ div.align{display:inline-block;vertical-align:middle;margin-right:20px;}
 div.location{font-size:20px;}
 a.ext{color:#3B73AF}
 span.underline{text-decoration:underline;text-decoration-style:dotted;}
-
-
+div.stash-content{font-size:18px;color:#272822;margin-top:50px;}
+div.stash-title{text-decoration:underline;text-decoration-style:dotted;color:#272822; }
+div.stash-element{margin-top:20px;}
+div.stash-element>a{color:#272822;}
+div.stash-desc{color:#B8B8B8;font-size:15px;}
+div.achievement>div{vertical-align:middle;}
+div.stash-det{text-align:center;}
+div.copyright{font-size:14px;position:absolute;text-align:right;bottom:80px;right:50px;color:#B8B8B8;}
 
 
 
@@ -169,9 +175,10 @@ span.underline{text-decoration:underline;text-decoration-style:dotted;}
 	.term{display:none;}
 	section.cover{background-size:auto 110%;}
 	section.education-cover{background:url('../img/bg3.jpg');height:130vh;background-size:200vmax auto;}
-	section.skills-cover{background:url('../img/bg2.jpg');height:280vh;background-size:200vmax auto;}
+	section.skills-cover{background:url('../img/bg2.jpg');height:240vh;background-size:200vmax auto;}
 	section.contact-cover{background:url('../img/bg4.jpg');height:100vh;background-size:200vmax auto;}
 	div.education-overlay{height:130vh;}
-	div.skills-overlay{height:280vh;}
+	div.skills-overlay{height:240vh;}
 	span.more-text{display:none;}
+	div.align{margin-top:10px;}
 }
