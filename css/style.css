@@ -169,8 +169,9 @@ span.underline{text-decoration:underline;text-decoration-style:dotted;}
 	.term{display:none;}
 	section.cover{background-size:auto 110%;}
 	section.education-cover{background:url('../img/bg3.jpg');height:130vh;background-size:200vmax auto;}
-	section.skills-cover{background:url('../img/bg2.jpg');height:100vh;background-size:200vmax auto;}
+	section.skills-cover{background:url('../img/bg2.jpg');height:280vh;background-size:200vmax auto;}
 	section.contact-cover{background:url('../img/bg4.jpg');height:100vh;background-size:200vmax auto;}
 	div.education-overlay{height:130vh;}
+	div.skills-overlay{height:280vh;}
 	span.more-text{display:none;}
 }
