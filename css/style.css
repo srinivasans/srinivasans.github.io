@@ -77,6 +77,7 @@ div.more>a{cursor:pointer;text-decoration:none;}
 h2{text-align:center;margin:0px auto;}
 section.cover{background:url('../img/bg1.jpg');height:100vh;background-size:110vmax auto;}
 section.skills-cover{background:url('../img/bg2.jpg');height:100vh;background-size:100vmax auto;}
+section.publications-cover{background:#333333;height:100vh;background-size:100vmax auto;}
 section.education-cover{background:url('../img/bg3.jpg');height:100vh;background-size:100vmax auto;}
 section.contact-cover{background:url('../img/bg4.jpg');height:100vh;background-size:100vmax auto;}
 div.proj{background:#FFFFFF;;padding:1vmin;width:20vmin;height:20vmin;}
@@ -143,9 +144,11 @@ div.stash-desc{color:#B8B8B8;font-size:15px;}
 div.achievement>div{vertical-align:middle;}
 div.stash-det{text-align:center;}
 div.copyright{font-size:14px;position:absolute;text-align:right;bottom:80px;right:50px;color:#B8B8B8;}
+div.menu{text-align: center}
 
-
-
+.publications-content{text-align:justify;overflow-y:auto;margin-top:50px;}
+.publication-item{color:white; text-align:left;padding-top:2vmin;}
+.publication-item>a{color:white;}
 
 
 
@@ -176,6 +179,7 @@ div.copyright{font-size:14px;position:absolute;text-align:right;bottom:80px;righ
 	section.cover{background-size:auto 110%;}
 	section.education-cover{background:url('../img/bg3.jpg');height:130vh;background-size:200vmax auto;}
 	section.skills-cover{background:url('../img/bg2.jpg');height:240vh;background-size:200vmax auto;}
+    section.publications-cover{background:#333333;height:240vh;background-size:200vmax auto;}
 	section.contact-cover{background:url('../img/bg4.jpg');height:100vh;background-size:200vmax auto;}
 	div.education-overlay{height:130vh;}
 	div.skills-overlay{height:240vh;}
